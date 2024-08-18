@@ -1,0 +1,148 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: url('https://wallpapercave.com/wp/wp7884508.jpg') no-repeat center center fixed;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+}
+
+.content {
+    bottom: 0px;
+    width: 97%;
+    
+    position: absolute;
+    height: 254px;
+    background-color: rgba(14, 13, 13, 0.892);
+    padding: 20px;
+   
+    margin: auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+@media (max-width:450px) {
+    .content {
+        height: 175px;
+        max-height: 301px;
+        bottom: -7px;
+        width: 90%;
+        position: absolute;
+        background-color: rgba(14, 13, 13, 0.892);
+        overflow-y: scroll;
+    }
+    }
+
+
+
+
+    .play-button{
+        top: 0px;
+        right: 20px;
+        border-radius: 50%;
+        justify-content: center;
+        display: flex;
+        position: absolute;
+        width: 63px;
+        height: 57px;
+        background-color:  rgb(127, 243, 44);
+    
+    }
+    .play-button img{
+        width: 63px;
+        height: 57px;
+    }
+    
+
+
+.play-button img{
+    width: 63px;
+    height: 57px;
+}
+
+.play-button{
+    top: 0px;
+    right: 20px;
+    border-radius: 50%;
+    justify-content: center;
+    display: flex;
+    position: absolute;
+    width: 63px;
+    height: 57px;
+    background-color:  rgb(127, 243, 44);
+
+}
+.songs{
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 3px;
+    width: 98%;
+    height: 40px;
+    border: 2px solid white;
+    background-color: #121212;
+}
+.song-div{
+   
+    max-height: 75vh;
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+ 
+    background-color: rgb(42, 42, 42);
+}
+
+.song-img{
+    display: flex;
+    height: 90%;
+    width: 100%;
+  gap: 6px;
+    align-items: center;
+    margin: 10px;
+}
+.song-img h3{
+  
+    color: white;
+}
+.music-img{
+    border-radius: 5px;
+    height: 30px;
+    width: 40px;
+}
+.under-player{
+    margin-bottom: 20px;
+    height: 33px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+   
+}
+.player{
+    
+    left: 0;
+    background-color: rgb(14, 13, 13);
+    border-radius: 11px;
+    width: 99%;
+    margin: 3px;
+    height: 61px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    /* bottom: 7px; */
+    gap: 5px;
+    bottom: 209px;
+
+}
+#songname{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 0px;
+    color: white;
+}

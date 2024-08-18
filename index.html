@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>spoitify</title>
+    <link rel="stylesheet" href="soptify.css">
+    <link rel="stylesheet" href="unity.css">
+  
+    <script defer src="spotify.js"></script>
+</head>
+<body>
+    <div class="main-container flex">
+
+        <div class="left-container border">
+
+            <div class="left-upper">
+                
+                <div class="home-logo flex">
+                    <div>
+                        <img src="logo.svg" alt="spotify" class="invert">
+                    </div>
+                
+                   <div class="home flex logo">
+                    <img src="home.svg" alt="home"class="invert">
+                    <h2>Home</h2>
+                </div>
+                <div class="search-logo flex logo">
+                    <img src="search.svg" alt="search"class="invert">
+                    <h2>Search</h2>
+                </div>
+                </div>
+
+                
+
+</div>
+<div class="left-bottom">
+
+    <div class="left-bottom-upper flex">
+
+        <div class="libeary-logo flex">
+            <img src="libray.svg" alt="libery"  class="invert  logo">
+            <h2>Your Library</h2>
+        </div>  
+        <div class="pluse-logo">
+            <a href=""><img src="pluse.svg" alt="" class="invert logo"></a>
+        </div>   
+
+       
+    </div>
+    
+    
+
+
+    <div class="favrat-song">
+
+        <div class="favrat-song-play">
+            <div id="both-logo"> 
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#fbf5f5" fill="none">
+                    <path d="M2.5 12C2.5 7.52166 2.5 5.28249 3.89124 3.89124C5.28249 2.5 7.52166 2.5 12 2.5C16.4783 2.5 18.7175 2.5 20.1088 3.89124C21.5 5.28249 21.5 7.52166 21.5 12C21.5 16.4783 21.5 18.7175 20.1088 20.1088C18.7175 21.5 16.4783 21.5 12 21.5C7.52166 21.5 5.28249 21.5 3.89124 20.1088C2.5 18.7175 2.5 16.4783 2.5 12Z" stroke="currentColor" stroke-width="1.5" />
+                    <path d="M13 14.5C13 15.8807 11.8807 17 10.5 17C9.11929 17 8 15.8807 8 14.5C8 13.1193 9.11929 12 10.5 12C11.8807 12 13 13.1193 13 14.5ZM13 14.5V7C13.3333 7.5 13.6 9.6 16 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <h4>Humdard</h4>
+            </div>
+            <div >
+            
+            
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#fffff" fill="none">
+                    <path d="M18.8906 12.846C18.5371 14.189 16.8667 15.138 13.5257 17.0361C10.296 18.8709 8.6812 19.7884 7.37983 19.4196C6.8418 19.2671 6.35159 18.9776 5.95624 18.5787C5 17.6139 5 15.7426 5 12C5 8.2574 5 6.3861 5.95624 5.42132C6.35159 5.02245 6.8418 4.73288 7.37983 4.58042C8.6812 4.21165 10.296 5.12907 13.5257 6.96393C16.8667 8.86197 18.5371 9.811 18.8906 11.154C19.0365 11.7084 19.0365 12.2916 18.8906 12.846Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+                </svg>
+            </div>
+                    </div>
+        <div class="favrat-song-play">
+            <div id="both-logo"> 
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#fbf5f5" fill="none">
+                    <path d="M2.5 12C2.5 7.52166 2.5 5.28249 3.89124 3.89124C5.28249 2.5 7.52166 2.5 12 2.5C16.4783 2.5 18.7175 2.5 20.1088 3.89124C21.5 5.28249 21.5 7.52166 21.5 12C21.5 16.4783 21.5 18.7175 20.1088 20.1088C18.7175 21.5 16.4783 21.5 12 21.5C7.52166 21.5 5.28249 21.5 3.89124 20.1088C2.5 18.7175 2.5 16.4783 2.5 12Z" stroke="currentColor" stroke-width="1.5" />
+                    <path d="M13 14.5C13 15.8807 11.8807 17 10.5 17C9.11929 17 8 15.8807 8 14.5C8 13.1193 9.11929 12 10.5 12C11.8807 12 13 13.1193 13 14.5ZM13 14.5V7C13.3333 7.5 13.6 9.6 16 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <h4>Humdard</h4>
+            </div>
+
+
+
+
+
+
+            <div onclick="loadTrack(-1)">
+            
+            
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#fffff" fill="none">
+                    <path d="M18.8906 12.846C18.5371 14.189 16.8667 15.138 13.5257 17.0361C10.296 18.8709 8.6812 19.7884 7.37983 19.4196C6.8418 19.2671 6.35159 18.9776 5.95624 18.5787C5 17.6139 5 15.7426 5 12C5 8.2574 5 6.3861 5.95624 5.42132C6.35159 5.02245 6.8418 4.73288 7.37983 4.58042C8.6812 4.21165 10.296 5.12907 13.5257 6.96393C16.8667 8.86197 18.5371 9.811 18.8906 11.154C19.0365 11.7084 19.0365 12.2916 18.8906 12.846Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+                </svg>
+            </div>
+        </div>
+        <div class="favrat-song-play">
+            <div id="both-logo"> 
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#fbf5f5" fill="none">
+                    <path d="M2.5 12C2.5 7.52166 2.5 5.28249 3.89124 3.89124C5.28249 2.5 7.52166 2.5 12 2.5C16.4783 2.5 18.7175 2.5 20.1088 3.89124C21.5 5.28249 21.5 7.52166 21.5 12C21.5 16.4783 21.5 18.7175 20.1088 20.1088C18.7175 21.5 16.4783 21.5 12 21.5C7.52166 21.5 5.28249 21.5 3.89124 20.1088C2.5 18.7175 2.5 16.4783 2.5 12Z" stroke="currentColor" stroke-width="1.5" />
+                    <path d="M13 14.5C13 15.8807 11.8807 17 10.5 17C9.11929 17 8 15.8807 8 14.5C8 13.1193 9.11929 12 10.5 12C11.8807 12 13 13.1193 13 14.5ZM13 14.5V7C13.3333 7.5 13.6 9.6 16 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <h4>Kya loge tum</h4>
+            </div>
+            <div  onclick="loadTrack(0)">
+            
+            
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#fffff" fill="none">
+                    <path d="M18.8906 12.846C18.5371 14.189 16.8667 15.138 13.5257 17.0361C10.296 18.8709 8.6812 19.7884 7.37983 19.4196C6.8418 19.2671 6.35159 18.9776 5.95624 18.5787C5 17.6139 5 15.7426 5 12C5 8.2574 5 6.3861 5.95624 5.42132C6.35159 5.02245 6.8418 4.73288 7.37983 4.58042C8.6812 4.21165 10.296 5.12907 13.5257 6.96393C16.8667 8.86197 18.5371 9.811 18.8906 11.154C19.0365 11.7084 19.0365 12.2916 18.8906 12.846Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+                </svg>
+            
+            </div>
+        </div>
+        <div class="favrat-song-play">
+            <div id="both-logo"> 
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#fbf5f5" fill="none">
+                    <path d="M2.5 12C2.5 7.52166 2.5 5.28249 3.89124 3.89124C5.28249 2.5 7.52166 2.5 12 2.5C16.4783 2.5 18.7175 2.5 20.1088 3.89124C21.5 5.28249 21.5 7.52166 21.5 12C21.5 16.4783 21.5 18.7175 20.1088 20.1088C18.7175 21.5 16.4783 21.5 12 21.5C7.52166 21.5 5.28249 21.5 3.89124 20.1088C2.5 18.7175 2.5 16.4783 2.5 12Z" stroke="currentColor" stroke-width="1.5" />
+                    <path d="M13 14.5C13 15.8807 11.8807 17 10.5 17C9.11929 17 8 15.8807 8 14.5C8 13.1193 9.11929 12 10.5 12C11.8807 12 13 13.1193 13 14.5ZM13 14.5V7C13.3333 7.5 13.6 9.6 16 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <h4>Sab kuch from MOH</h4>
+            </div>
+            <div onclick="loadTrack(1)">
+            
+            
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#fffff" fill="none">
+                    <path d="M18.8906 12.846C18.5371 14.189 16.8667 15.138 13.5257 17.0361C10.296 18.8709 8.6812 19.7884 7.37983 19.4196C6.8418 19.2671 6.35159 18.9776 5.95624 18.5787C5 17.6139 5 15.7426 5 12C5 8.2574 5 6.3861 5.95624 5.42132C6.35159 5.02245 6.8418 4.73288 7.37983 4.58042C8.6812 4.21165 10.296 5.12907 13.5257 6.96393C16.8667 8.86197 18.5371 9.811 18.8906 11.154C19.0365 11.7084 19.0365 12.2916 18.8906 12.846Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+                </svg>
+            </div>
+        </div>
+        <div class="favrat-song-play">
+            <div id="both-logo"> 
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#fbf5f5" fill="none">
+                    <path d="M2.5 12C2.5 7.52166 2.5 5.28249 3.89124 3.89124C5.28249 2.5 7.52166 2.5 12 2.5C16.4783 2.5 18.7175 2.5 20.1088 3.89124C21.5 5.28249 21.5 7.52166 21.5 12C21.5 16.4783 21.5 18.7175 20.1088 20.1088C18.7175 21.5 16.4783 21.5 12 21.5C7.52166 21.5 5.28249 21.5 3.89124 20.1088C2.5 18.7175 2.5 16.4783 2.5 12Z" stroke="currentColor" stroke-width="1.5" />
+                    <path d="M13 14.5C13 15.8807 11.8807 17 10.5 17C9.11929 17 8 15.8807 8 14.5C8 13.1193 9.11929 12 10.5 12C11.8807 12 13 13.1193 13 14.5ZM13 14.5V7C13.3333 7.5 13.6 9.6 16 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <h4>Hamare adhuri khahani</h4>
+            </div>
+            <div onclick="loadTrack(2)">
+            
+            
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#fffff" fill="none">
+                    <path d="M18.8906 12.846C18.5371 14.189 16.8667 15.138 13.5257 17.0361C10.296 18.8709 8.6812 19.7884 7.37983 19.4196C6.8418 19.2671 6.35159 18.9776 5.95624 18.5787C5 17.6139 5 15.7426 5 12C5 8.2574 5 6.3861 5.95624 5.42132C6.35159 5.02245 6.8418 4.73288 7.37983 4.58042C8.6812 4.21165 10.296 5.12907 13.5257 6.96393C16.8667 8.86197 18.5371 9.811 18.8906 11.154C19.0365 11.7084 19.0365 12.2916 18.8906 12.846Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+                </svg>
+            </div>
+        </div>
+       
+
+
+
+
+
+
+
+
+
+        <div class="favrat-song-play">
+            <div id="both-logo"> 
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#fbf5f5" fill="none">
+                    <path d="M2.5 12C2.5 7.52166 2.5 5.28249 3.89124 3.89124C5.28249 2.5 7.52166 2.5 12 2.5C16.4783 2.5 18.7175 2.5 20.1088 3.89124C21.5 5.28249 21.5 7.52166 21.5 12C21.5 16.4783 21.5 18.7175 20.1088 20.1088C18.7175 21.5 16.4783 21.5 12 21.5C7.52166 21.5 5.28249 21.5 3.89124 20.1088C2.5 18.7175 2.5 16.4783 2.5 12Z" stroke="currentColor" stroke-width="1.5" />
+                    <path d="M13 14.5C13 15.8807 11.8807 17 10.5 17C9.11929 17 8 15.8807 8 14.5C8 13.1193 9.11929 12 10.5 12C11.8807 12 13 13.1193 13 14.5ZM13 14.5V7C13.3333 7.5 13.6 9.6 16 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <h4>Kesariya</h4>
+            </div>
+            <div onclick="loadTrack(3)">
+            
+            
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#fffff" fill="none">
+                    <path d="M18.8906 12.846C18.5371 14.189 16.8667 15.138 13.5257 17.0361C10.296 18.8709 8.6812 19.7884 7.37983 19.4196C6.8418 19.2671 6.35159 18.9776 5.95624 18.5787C5 17.6139 5 15.7426 5 12C5 8.2574 5 6.3861 5.95624 5.42132C6.35159 5.02245 6.8418 4.73288 7.37983 4.58042C8.6812 4.21165 10.296 5.12907 13.5257 6.96393C16.8667 8.86197 18.5371 9.811 18.8906 11.154C19.0365 11.7084 19.0365 12.2916 18.8906 12.846Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+                </svg>
+            </div>
+        </div>
+        <div class="favrat-song-play">
+            <div id="both-logo"> 
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#fbf5f5" fill="none">
+                    <path d="M2.5 12C2.5 7.52166 2.5 5.28249 3.89124 3.89124C5.28249 2.5 7.52166 2.5 12 2.5C16.4783 2.5 18.7175 2.5 20.1088 3.89124C21.5 5.28249 21.5 7.52166 21.5 12C21.5 16.4783 21.5 18.7175 20.1088 20.1088C18.7175 21.5 16.4783 21.5 12 21.5C7.52166 21.5 5.28249 21.5 3.89124 20.1088C2.5 18.7175 2.5 16.4783 2.5 12Z" stroke="currentColor" stroke-width="1.5" />
+                    <path d="M13 14.5C13 15.8807 11.8807 17 10.5 17C9.11929 17 8 15.8807 8 14.5C8 13.1193 9.11929 12 10.5 12C11.8807 12 13 13.1193 13 14.5ZM13 14.5V7C13.3333 7.5 13.6 9.6 16 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <h4>Chaamak chalo</h4>
+            </div>
+            <div onclick="loadTrack(4)">
+            
+            
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#fffff" fill="none">
+                    <path d="M18.8906 12.846C18.5371 14.189 16.8667 15.138 13.5257 17.0361C10.296 18.8709 8.6812 19.7884 7.37983 19.4196C6.8418 19.2671 6.35159 18.9776 5.95624 18.5787C5 17.6139 5 15.7426 5 12C5 8.2574 5 6.3861 5.95624 5.42132C6.35159 5.02245 6.8418 4.73288 7.37983 4.58042C8.6812 4.21165 10.296 5.12907 13.5257 6.96393C16.8667 8.86197 18.5371 9.811 18.8906 11.154C19.0365 11.7084 19.0365 12.2916 18.8906 12.846Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+                </svg>
+            </div>
+        </div>
+        <div class="favrat-song-play">
+            <div id="both-logo"> 
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#fbf5f5" fill="none">
+                    <path d="M2.5 12C2.5 7.52166 2.5 5.28249 3.89124 3.89124C5.28249 2.5 7.52166 2.5 12 2.5C16.4783 2.5 18.7175 2.5 20.1088 3.89124C21.5 5.28249 21.5 7.52166 21.5 12C21.5 16.4783 21.5 18.7175 20.1088 20.1088C18.7175 21.5 16.4783 21.5 12 21.5C7.52166 21.5 5.28249 21.5 3.89124 20.1088C2.5 18.7175 2.5 16.4783 2.5 12Z" stroke="currentColor" stroke-width="1.5" />
+                    <path d="M13 14.5C13 15.8807 11.8807 17 10.5 17C9.11929 17 8 15.8807 8 14.5C8 13.1193 9.11929 12 10.5 12C11.8807 12 13 13.1193 13 14.5ZM13 14.5V7C13.3333 7.5 13.6 9.6 16 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <h4>haai Garmi</h4>
+            </div>
+            <div onclick="loadTrack(5)">
+            
+            
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#fffff" fill="none">
+                    <path d="M18.8906 12.846C18.5371 14.189 16.8667 15.138 13.5257 17.0361C10.296 18.8709 8.6812 19.7884 7.37983 19.4196C6.8418 19.2671 6.35159 18.9776 5.95624 18.5787C5 17.6139 5 15.7426 5 12C5 8.2574 5 6.3861 5.95624 5.42132C6.35159 5.02245 6.8418 4.73288 7.37983 4.58042C8.6812 4.21165 10.296 5.12907 13.5257 6.96393C16.8667 8.86197 18.5371 9.811 18.8906 11.154C19.0365 11.7084 19.0365 12.2916 18.8906 12.846Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+                </svg>
+            </div>
+        </div>
+        <div class="favrat-song-play">
+            <div id="both-logo"> 
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#fbf5f5" fill="none">
+                    <path d="M2.5 12C2.5 7.52166 2.5 5.28249 3.89124 3.89124C5.28249 2.5 7.52166 2.5 12 2.5C16.4783 2.5 18.7175 2.5 20.1088 3.89124C21.5 5.28249 21.5 7.52166 21.5 12C21.5 16.4783 21.5 18.7175 20.1088 20.1088C18.7175 21.5 16.4783 21.5 12 21.5C7.52166 21.5 5.28249 21.5 3.89124 20.1088C2.5 18.7175 2.5 16.4783 2.5 12Z" stroke="currentColor" stroke-width="1.5" />
+                    <path d="M13 14.5C13 15.8807 11.8807 17 10.5 17C9.11929 17 8 15.8807 8 14.5C8 13.1193 9.11929 12 10.5 12C11.8807 12 13 13.1193 13 14.5ZM13 14.5V7C13.3333 7.5 13.6 9.6 16 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <h4>Hanuman chalisha</h4>
+            </div>
+            <div onclick="loadTrack(6)">
+            
+            
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#fffff" fill="none">
+                    <path d="M18.8906 12.846C18.5371 14.189 16.8667 15.138 13.5257 17.0361C10.296 18.8709 8.6812 19.7884 7.37983 19.4196C6.8418 19.2671 6.35159 18.9776 5.95624 18.5787C5 17.6139 5 15.7426 5 12C5 8.2574 5 6.3861 5.95624 5.42132C6.35159 5.02245 6.8418 4.73288 7.37983 4.58042C8.6812 4.21165 10.296 5.12907 13.5257 6.96393C16.8667 8.86197 18.5371 9.811 18.8906 11.154C19.0365 11.7084 19.0365 12.2916 18.8906 12.846Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+                </svg>
+            </div>
+        </div>
+        
+
+
+
+
+    </div>
+
+
+    <div class="footer">
+        <div><a href="https://www.spotify.com/in-en/legal/"><span>Legal</span></a></div>
+        <div><a href="https://www.spotify.com/in-en/safetyandprivacy/"><span>Privacy Center</span></a></div>
+        <div><a href="https://www.spotify.com/in-en/legal/privacy-policy/"><span>Privacy Policy</span></a></div>
+        <div><a href="https://www.spotify.com/in-en/legal/cookies-policy/"><span>Cookies</span></a></div>
+        <div><a href="https://www.spotify.com/in-en/legal/privacy-policy/#s3"><span>About Ads</span></a></div>
+        <div><a href="https://www.spotify.com/in-en/accessibility/"><span>Accessibility</span>  </a></div>
+    </div>
+
+    
+      
+    <div class="footer-bottom">
+        © 2024  spotify . All rights reserved To the Mayank kumar 
+    </div>
+
+</div>
+
+
+    
+
+    
+</div>
+        
+
+
+ <div class="right-container border">
+<div class="header flex">
+    <div class="left-nav flex position">
+     <div class="left-nav-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#ffffff" fill="none">
+            <path d="M15 6C15 6 9.00001 10.4189 9 12C8.99999 13.5812 15 18 15 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+     </div>
+     <div class="right-nav-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#ffffff" fill="none">
+           
+            <path d="M9.00005 6C9.00005 6 15 10.4189 15 12C15 13.5812 9 18 9 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        
+        </svg>
+     
+    
+    </div>
+    <div class="three-dot">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#ffffff" fill="none">
+            <path d="M4 5L20 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M4 12L20 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M4 19L20 19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+    </div>
+    </div>
+<div class="right-nav flex">
+    <a href="#" class="signup">Sign up</a>
+    
+   <a href="#" class="signup">Log in</a>
+</div>
+</div>
+
+
+<div class="main-body">
+    <h2>Popular artist</h2>
+    
+    <div class="artist">
+
+       <a href="pritam.html"> <div  class="size-card">
+        
+            <div class="play-button">
+                <div class="svg-container">
+                   <img src="playing.svg" alt="">
+                </div>
+            </div>
+           
+            
+           
+            <div class="img">
+               
+                <img src="https://static.toiimg.com/photo/83402681.cms"  alt="">
+            
+            </div>
+            <div class="card-contant flex">
+                <h3>Pritam</h3>
+                <h4>Artist </h4>
+            </div>
+        </div></a>
+        
+      <a href="arjit.html">  <div  class="size-card">
+        
+            <div class="play-button">
+                <div class="svg-container">
+                    <img src="playing.svg" alt="">
+                </div>
+            </div>
+           
+            
+           
+            <div class="img">
+               
+                <img src="https://www.musicalsafar.com/wp-content/uploads/2021/08/20_05_2021-arijit_singh_21660518.jpg"  alt="">
+            
+            </div>
+            <div class="card-contant flex">
+                <h3>Arjit singh</h3>
+                <h4>Artist </h4>
+            </div>
+        </div>
+    </a>
+
+      <a href="rahman.html">  <div  class="size-card">
+        
+            <div class="play-button">
+                <div class="svg-container">
+                    <img src="playing.svg" alt="">
+                </div>
+            </div>
+           
+            
+           
+            <div class="img">
+               
+                <img src="https://s3.amazonaws.com/bit-photos/large/8653496.jpeg"  alt="">
+            
+            </div>
+            <div class="card-contant flex">
+                <h3>A.R Rahman</h3>
+                <h4>Artist </h4>
+            </div>
+        </div>
+         
+      </a>
+       <a href="andhru.html"> <div  class="size-card">
+        
+            <div class="play-button">
+                <div class="svg-container">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none">
+                        <path d="M18.8906 12.846C18.5371 14.189 16.8667 15.138 13.5257 17.0361C10.296 18.8709 8.6812 19.7884 7.37983 19.4196C6.8418 19.2671 6.35159 18.9776 5.95624 18.5787C5 17.6139 5 15.7426 5 12C5 8.2574 5 6.3861 5.95624 5.42132C6.35159 5.02245 6.8418 4.73288 7.37983 4.58042C8.6812 4.21165 10.296 5.12907 13.5257 6.96393C16.8667 8.86197 18.5371 9.811 18.8906 11.154C19.0365 11.7084 19.0365 12.2916 18.8906 12.846Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+                    </svg>
+                </div>
+            </div>
+           
+            
+           
+            <div class="img">
+               
+                <img src="https://tse2.mm.bing.net/th?id=OIP.dlypIMb0iKLNy-Op1QI3RAAAAA&pid=Api&P=0&h=220"  alt="">
+            
+            </div>
+            <div class="card-contant flex">
+                <h3>Anirudh </h3>
+                <h4>Artist </h4>
+            </div>
+        </div>
+</a>
+
+        <a href="vishal.html"><div  class="size-card">
+        
+            <div class="play-button">
+                <div class="svg-container">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none">
+                        <path d="M18.8906 12.846C18.5371 14.189 16.8667 15.138 13.5257 17.0361C10.296 18.8709 8.6812 19.7884 7.37983 19.4196C6.8418 19.2671 6.35159 18.9776 5.95624 18.5787C5 17.6139 5 15.7426 5 12C5 8.2574 5 6.3861 5.95624 5.42132C6.35159 5.02245 6.8418 4.73288 7.37983 4.58042C8.6812 4.21165 10.296 5.12907 13.5257 6.96393C16.8667 8.86197 18.5371 9.811 18.8906 11.154C19.0365 11.7084 19.0365 12.2916 18.8906 12.846Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+                    </svg>
+                </div>
+            </div>
+           
+            
+           
+            <div class="img">
+               
+                <img src="https://tse2.mm.bing.net/th?id=OIP.JtjM6zdbDe4iSHjGKxSAbAHaHa&pid=Api&P=0&h=220"  alt="">
+            
+            </div>
+            <div class="card-contant flex">
+                <h3>vishal mishra</h3>
+                <h4>Artist </h4>
+            </div>
+        </div>
+        </a>
+<a href="badsha.html">
+        <div  class="size-card">
+        
+            <div class="play-button">
+                <div class="svg-container">
+                    <img src="playing.svg" alt="">
+                </div>
+            </div>
+           
+            
+           
+            <div class="img">
+               
+                <img src="https://tse1.mm.bing.net/th?id=OIP._BIAPK8T4YjukJqSHt1uQgHaFn&pid=Api&P=0&h=220"  alt="">
+            
+            </div>
+            <div class="card-contant flex">
+                <h3>Badshas</h3>
+                <h4>Artist </h4>
+            </div>
+        </div>
+ </a>
+
+</div>
+
+<div class="popular-aulbam">
+    <audio id="audio"></audio>
+
+<div class="music-card">
+    <div class="play-button">
+        <div class="svg-img" onclick="loadTrack(7)">
+            <img src="playing.svg" alt="" >
+        </div>
+    
+    </div>
+   
+    
+   
+    <div class="song-img">
+       
+        <img src="https://tse1.mm.bing.net/th?id=OIP.ZwaPTn_20mK9De_O-EO-eQHaEK&pid=Api&P=0&h=220"  alt="">
+    
+    </div>
+    <div class="music-contant flex">
+        <h3>Tum hi ho..</h3>
+        <h4>Artist </h4>
+    </div>
+
+
+
+</div>
+<div class="music-card">
+    <div class="play-button">
+        <div class="svg-img" onclick="loadTrack(8)">
+
+          
+            
+                
+         
+                <img src="playing.svg" alt="" >
+        
+        </div>
+    </div>
+   
+    
+   
+    <div class="song-img">
+       
+        <img src="https://tse1.mm.bing.net/th?id=OIP.DNCvKZVb3N6PCz6wN908vQHaEK&pid=Api&P=0&h=220"  alt="">
+    
+    </div>
+    <div class="music-contant flex">
+        <h3>Kalaastar</h3>
+        <h4>Artist </h4>
+    </div>
+
+
+
+</div>
+<div class="music-card">
+    <div class="play-button">
+        <div class="svg-img" onclick="loadTrack(9)">
+            
+            <img src="playing.svg" alt="">
+        
+        </div>
+    </div>
+   
+    
+   
+    <div class="song-img">
+       
+        <img src="https://tse1.mm.bing.net/th?id=OIP.2LXZYRupf8oEfdrvEEokBwHaDz&pid=Api&P=0&h=220"  alt="">
+    
+    </div>
+    <div class="music-contant flex">
+        <h3>Desi kalakar</h3>
+        <h4>Artist </h4>
+    </div>
+
+
+
+</div>
+<div class="music-card">
+    <div class="play-button">
+        <div class="svg-img" onclick="loadTrack(10)">
+            
+                <img src="playing.svg" alt="">
+        
+        </div>
+    </div>
+   
+    
+   
+    <div class="song-img">
+       
+        <img src="http://britasia.tv/wp-content/uploads/2018/04/Capture.png"  alt="">
+    
+    </div>
+    <div class="music-contant flex">
+        <h3>Tera buzz ..</h3>
+        <h4>Artist </h4>
+    </div>
+
+
+
+</div>
+<div class="music-card">
+    <div class="play-button">
+        <div class="svg-img"  onclick="loadTrack(11)">
+            
+                <img src="playing.svg" alt=""  >
+            
+        </div>
+    </div>
+   
+    
+   
+    <div class="song-img">
+       
+        <img src="https://i.ytimg.com/vi/uoGCdf_jJfI/maxresdefault.jpg"  alt="">
+    
+    </div>
+    <div class="music-contant flex">
+        <h3>Tum se hi..</h3>
+        <h4>Artist </h4>
+    </div>
+
+   
+               
+
+</div>
+    </div>
+
+    <div class="player">
+
+
+
+        <h4 id="songname"></h4>
+        
+    <div class="under-player">
+
+    
+
+        
+
+        <div onclick="prevTrack()">
+
+      
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#fffffff" fill="none">
+                <path d="M8.06492 12.6258C8.31931 13.8374 9.67295 14.7077 12.3802 16.4481C15.3247 18.3411 16.797 19.2876 17.9895 18.9229C18.3934 18.7994 18.7654 18.5823 19.0777 18.2876C20 17.4178 20 15.6118 20 12C20 8.38816 20 6.58224 19.0777 5.71235C18.7654 5.41773 18.3934 5.20057 17.9895 5.07707C16.797 4.71243 15.3247 5.6589 12.3802 7.55186C9.67295 9.29233 8.31931 10.1626 8.06492 11.3742C7.97836 11.7865 7.97836 12.2135 8.06492 12.6258Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+                <path d="M4 4L4 20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+            </svg>
+       
+        </div>
+    
+
+
+        <audio  id="audio">  
+           
+          </audio>
+
+    <img src="play.svg" alt="" onclick="playMusic()" id="myImage">
+
+
+   
+
+
+    <div onclick="nextTrack()">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#ffffff" fill="none">
+            <path d="M15.9351 12.6258C15.6807 13.8374 14.327 14.7077 11.6198 16.4481C8.67528 18.3411 7.20303 19.2876 6.01052 18.9229C5.60662 18.7994 5.23463 18.5823 4.92227 18.2876C4 17.4178 4 15.6118 4 12C4 8.38816 4 6.58224 4.92227 5.71235C5.23463 5.41773 5.60662 5.20057 6.01052 5.07707C7.20304 4.71243 8.67528 5.6589 11.6198 7.55186C14.327 9.29233 15.6807 10.1626 15.9351 11.3742C16.0216 11.7865 16.0216 12.2135 15.9351 12.6258Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+            <path d="M20 5V19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+        </svg>
+   
+    </div>
+
+  
+</div>
+
+
+
+
+
+
+   
+
+
+</div>
+
+
+   
+<div class="nav-bar">
+
+   <a href="index.html" class="nava"> <div  class="nav-bar-img">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="50" height="50" color="#fbf5f5" fill="none">
+            <path d="M9.06165 4.82633L3.23911 9.92134C2.7398 10.3583 3.07458 11.1343 3.76238 11.1343C4.18259 11.1343 4.52324 11.4489 4.52324 11.8371V15.0806C4.52324 17.871 4.52324 19.2662 5.46176 20.1331C6.40029 21 7.91082 21 10.9319 21H13.0681C16.0892 21 17.5997 21 18.5382 20.1331C19.4768 19.2662 19.4768 17.871 19.4768 15.0806V11.8371C19.4768 11.4489 19.8174 11.1343 20.2376 11.1343C20.9254 11.1343 21.2602 10.3583 20.7609 9.92134L14.9383 4.82633C13.5469 3.60878 12.8512 3 12 3C11.1488 3 10.4531 3.60878 9.06165 4.82633Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M12 16H12.009" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+        <h4>Home</h4>
+        </div>
+    </a>
+    <a href="search.html" class="nava"> <div class="nav-bar-img">
+        
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#fbf5f5" fill="none">
+                <path d="M17.5 17.5L22 22" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M20 11C20 6.02944 15.9706 2 11 2C6.02944 2 2 6.02944 2 11C2 15.9706 6.02944 20 11 20C15.9706 20 20 15.9706 20 11Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+            </svg>
+            <h4>Search</h4>
+        </div>
+    </a>
+    <a href="libary.html" class="nava">   <div class="nav-bar-img">
+
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#fbf5f5" fill="none">
+                <path d="M2 3L20 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M2 10L15 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M2 17L9 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M18.25 19C18.25 20.6569 16.8509 22 15.125 22C13.3991 22 12 20.6569 12 19C12 17.3431 13.3991 16 15.125 16C16.8509 16 18.25 17.3431 18.25 19ZM18.25 19V10C18.6667 10.6 19 13.12 22 13.6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <h4>Libarary</h4>
+        </div>
+    </a>
+    <a href="premium.html" class="nava">  <div class="nav-bar-img">
+
+
+        <img src="libray.svg" alt="libery"  class=" invert logo">
+            <h4>Premium</h4>
+        </div>
+        </a>
+</div>
+
+
+
+    </div>
+   
+   
+</body>
+</html>

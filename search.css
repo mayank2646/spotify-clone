@@ -1,0 +1,117 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: #121212;
+}
+.invert{
+    filter: invert(1);
+}
+.logo{
+    width: 24px;
+}
+.title{
+    color: white;
+    margin: 20px;
+}
+.search-space img{
+    margin-top: 3px;
+  right: 30px;
+    position: absolute;
+    border-color: white;
+    background-color: white;
+    width: 26px;
+    height: 30px;
+}
+.search-space input{
+    border-radius:  5px; ;
+    width: 91%;
+    height: 35px;
+}
+.search-space{
+    display: flex;
+    justify-content: center;
+}
+#browser-play{
+    color: white;
+    margin: 20px;
+}
+.grid-container {
+    max-height: 423px;
+    color: white;
+    margin: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 150px);
+    gap: 10px;
+    overflow-y: scroll;
+}
+input::placeholder {
+    color: #888;
+    font-style: italic;
+    font-size: 14px;
+    opacity: 0.8; /* For transparency */
+    padding-left: 10px;
+    
+}
+
+.grid-item {
+    border-radius: 5px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ccc;
+    font-size: 1.5em;
+}
+#box1{
+    background-color:rgb(220, 20, 140) ;
+}
+#box2{
+    background-color: rgb(220, 20, 140) ;
+}
+#box3{
+    background-color: rgb(132, 0, 231);
+}
+#box4{
+    background-color: rgb(30, 50, 100);
+}
+#box5{
+    background-color: rgb(232, 17, 91);
+}
+#box6{
+    background-color: rgb(0, 100, 80) ;
+}
+.nava{
+    text-decoration: none;
+    color: white;
+   }
+   .nava :hover{
+    color: rgb(32, 214, 99);
+   }
+    .nav-bar{
+        justify-content: space-around;
+        display: flex;
+        border-radius: 5px;
+        bottom: 2px;
+        position: absolute;
+        width: 100%;
+        height: 62px;
+        background-color: rgba(34, 34, 34, 0.752);
+    }
+    .nav-bar-img{
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 2px;
+        display: flex;
+        width: 58px;
+        height: 47px;
+        margin-top: 10px;
+        
+    }

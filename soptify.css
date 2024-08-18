@@ -1,0 +1,568 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+background-color: black;
+color: white;
+
+}
+.right-container{
+    position: relative;
+}
+.right-container{
+ width: 75vw;
+    
+}
+.left-container{
+  width: 25vw;
+   
+}   
+.logo{
+    width: 30px;
+    gap: 18px;
+}
+.home-logo{
+    margin: 10px;
+    flex-direction: column;
+  justify-content: space-around;
+  height: 90%;
+}
+.left-upper{
+    margin-left: 10px;
+    margin-bottom: 5px;
+    margin-right: 5px;
+background-color:  #121212;
+border-radius: 10px;
+height: 190px;
+
+}
+.invert{
+    filter: invert(1);
+}
+.left-bottom-upper{
+  
+   
+border-radius: 10px;
+justify-content: space-between;
+}
+.libeary-logo{
+    margin-top: 10px;
+    gap: 10px;
+    margin-left: 10px;
+}
+.pluse-logo{
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+@media (max-width: 599px) {
+    
+    .right-container{
+    
+        border: 2px solid rgb(163, 152, 152);
+       
+        background-color: #121212;
+        border-radius: 20px;
+        margin: 20px;
+        
+    }
+
+    .left-container{
+        position: absolute;
+        left: -100%;
+        transition: all 0.3s;
+        z-index: 1;
+        width: 233px;
+    }
+    .right-container{
+        width: 100vw;
+         height: 100px;
+       }
+
+  }
+  .left-bottom{
+    justify-content: space-between;
+    flex-direction: column;
+    display: flex;
+    background-color: #121212;
+    border-radius: 10px;
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-right: 5px;
+    height: 50vh;
+}
+  
+  .footer a{
+    color: white;
+  }
+  .footer {
+   display: flex;
+   flex-wrap: wrap;
+   margin: 10px;
+   
+    font-size: small;
+   gap: 10px;
+  }
+  .right-container{
+    background:  #121212;
+   margin-left: 5px;
+   margin-right: 10px;
+   margin-top: 10px;
+    border-radius: 10px;
+  }
+  .header{
+    justify-content: space-between;
+    height: 10vh;
+    background-color: rgb(14, 13, 13);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    
+  }
+  .artist a{
+    color: white;
+    text-decoration: none;
+  }
+.left-nav{
+    width: 5vw;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.right-nav{
+    width: 15vw;
+   
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    
+}
+
+.right-nav a{
+  
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+  
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+ 
+    text-decoration: none;
+}
+
+.signup:hover {
+    background-color:white;
+    color: black;
+}
+.main-body{
+    width: 75vw;
+    height: 100vh;
+}
+.main-body h2{
+    font-size:2.4rem;
+    padding: 10px;
+}
+.artist{
+    display: flex;
+position: relative;
+justify-content: space-between;
+flex-wrap: wrap;
+   margin: 10px;
+   
+   max-height: 60vh;
+}
+.size-card{
+    height: 37vh;
+position: relative;
+    width: 180px;
+}
+.img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.artist img{
+    margin-top: 5px;
+    width: 150px;
+    height: 150px;
+    border-radius: 80px;
+}
+.card-contant{
+    margin: 15px;
+    flex-direction: column;
+    gap: 5px;
+
+}
+.card-contant h4{
+    color: rgb(188, 187, 185);
+    font-size: 15px;
+}
+.size-card:hover{
+    background-color:  #2e2d2d;
+    border-radius: 10px;
+    .play-button{
+        animation: slideFromLeft 1s ease forwards;
+        opacity: 1;
+    }
+
+}
+@keyframes slideFromLeft {
+
+    0% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateY(0%);
+    }
+    
+}
+.svg-container {
+    display: flex;
+    
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background-color:  rgb(127, 243, 44);
+    border-radius: 50%;
+    color: black;
+}
+
+
+.play-button{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: aliceblue;
+    position: absolute;
+    right: 10px;
+    top: 110px;
+    opacity: 0;
+
+}
+.music-card{
+    height: 37vh;
+position: relative;
+    width: 180px;
+    margin: 5px;
+
+}
+.popular-aulbam img{
+    margin-top: 5px;
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+
+}
+.song-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.music-contant{
+    margin: 15px;
+    flex-direction: column;
+    gap: 5px;
+}
+.popular-aulbam{
+    margin: 5px;
+    display: flex;
+
+justify-content: space-between;
+flex-wrap: wrap;
+  
+}
+.popular-aulbam :hover{
+    background-color:   #2e2d2d;
+    border-radius: 10px;
+    .play-button{
+        animation: slideFromLeft 1s ease forwards;
+        opacity: 1;
+    }
+}
+
+@keyframes slideFromLeft {
+
+    0% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+
+    100%{
+        
+        opacity: 1;
+        transform: translateY(0%);
+    }
+    
+}
+
+@media (max-width:1000px){
+    .artist{
+        max-height: 80vh;
+    }
+    .main-body{
+        height: 1500px;
+    }
+    
+}
+#footerforphone{
+    display: none;
+}
+.player{
+    
+    background-color: rgb(14, 13, 13);
+    border-radius: 11px;
+    width: 99%;
+    margin: 3px;
+    height: 61px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    bottom: 60px;
+    gap: 5px;
+}
+
+.main-body{
+    max-height: 88vh;
+    overflow-y: scroll;
+}
+
+.under-player{
+    height: 33px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+   
+}
+.three-dot{
+    display: none;
+}
+@media (max-width:450px){
+    body{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        width: 100vw;
+    }
+    #footerforphone{
+        display: block;
+        font-size: 13px;
+        margin-bottom: 5px;
+    }
+   
+    .main-container {
+        width: 98%;
+        height: 100vh;
+    }
+    .right-container{
+        width: 100%;
+        height: 98%;
+    }
+    .header{
+        height: 9vh;
+        background-color: rgb(14, 13, 13);
+    }
+    .left-nav{
+        width: 20vw;
+    }
+    .right-nav{
+        width: 45vw ;
+    }
+    .main-body{
+        height: 500px;
+        width: 100%;
+    }
+    .main-body h2{
+        justify-content: center;
+        display: flex;
+    }
+    .artist{
+        height: 240px;
+        display: flex;
+        gap: 8px;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        max-width: 100%;
+     overflow-x: auto;
+     overflow-y: hidden;
+    }
+    .size-card {
+        height: 38vh;
+        position: relative;
+        width: 150px;
+    }
+    .popular-aulbam {
+        height: 90%;
+        padding-top: 10px;
+        margin: 5px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        max-width: 100%;
+        overflow-y:scroll;
+    }
+    
+    .player{
+    
+        background-color: rgb(14, 13, 13);
+        border-radius: 11px;
+        width: 99%;
+        margin: 3px;
+        height: 61px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        position: absolute;
+        bottom: 60px;
+        gap: 5px;
+    }
+    
+     
+     .under-player {
+        background-color: rgb(14, 13, 13);
+        height: 28px;
+    }
+
+   .nava{
+    text-decoration: none;
+    color: white;
+   }
+   .nava :hover{
+    color: rgb(32, 214, 99);
+   }
+    .nav-bar{
+        display: flex;
+        border-radius: 5px;
+        bottom: 2px;
+        position: absolute;
+        width: 100%;
+        height: 62px;
+        background-color: rgba(14, 13, 13, 0.818);
+    }
+
+}
+.under-player button{
+    background-color:  #121212;
+}
+
+
+
+.svg-container img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    background-color: rgb(127, 243, 44);
+    border-radius: 50%;
+   
+}
+.svg-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background-color: rgb(127, 243, 44);
+    border-radius: 50%;
+    color: black;
+}
+.svg-img img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    background-color: rgb(127, 243, 44);
+    border-radius: 50%;
+    
+}
+.svg-img :hover{
+    
+    background-color:rgb(127, 243, 44) ;
+    border-radius: 50%;
+}
+.play-button:hover{
+    background-color: aquamarine;
+}
+
+
+.favrat-song{
+    overflow-y: scroll;
+    max-height: 75vh;
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    flex-direction: column;
+   
+    width: 100%;
+    height: 174px;
+    background-color: rgb(42, 42, 42);
+   
+}
+.favrat-song-play{
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 3px;
+    width: 98%;
+ height: 40px;
+  border: 2px solid white;
+  background-color: #121212;
+}
+#both-logo{
+    gap: 10px;
+    display: flex;
+}
+#audio{
+    width: 611px;
+    height: 40px;
+}
+#songname{
+    height: 60px;
+}
+.footer-bottom{
+    margin: 3px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+ 
+    background-color:  rgb(14, 13, 13);
+}
+.nav-bar{
+    display: flex;
+    justify-content: space-around;
+    
+    border-radius: 5px;
+    bottom: 2px;
+    position: absolute;
+    width: 100%;
+    height: 62px;
+    background-color: rgba(34, 34, 34, 0.752);
+}
+.nav-bar-img{
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2px;
+    display: flex;
+    width: 58px;
+    height: 47px;
+    margin-top: 10px;
+    
+}
+.logo{
+    width: 24px;
+}
